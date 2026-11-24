@@ -1,5 +1,6 @@
 import{mkdirSync as M,readdirSync as R,readFileSync as F,writeFileSync as W}from'node:fs';
 import{join as J}from'node:path';
+// Trap order follows ISA.md: step limit, pc, opcode, immediate, stack, then the op's own trap.
 function X(p,g){
 let D=new Int32Array(256),C=new Int32Array(64),Y=new Int32Array(256),o=new Uint8Array(65536),s=0,c=0,P=0,t=0,n=0,i=0;
 let E=x=>({o:o.slice(0,n),c:x});
